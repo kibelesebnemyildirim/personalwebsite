@@ -3,14 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Kibele Sebnem Yildirim — PhD Researcher, Operations Management</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
   <style>
+
     /* ── TOKENS ─────────────────────────────────────────────────────── */
+
     :root {
       --navy:     #0d2240;
       --navy-mid: #1a3a5c;
-      --red:      #c8102e;       /* McGill red accent */
+      --red:      #c8102e;
       --gold:     #b8960c;
       --cream:    #f7f4ef;
       --cream2:   #ede8df;
@@ -22,9 +27,19 @@
       --sans:     'DM Sans', system-ui, sans-serif;
     }
 
+
     /* ── RESET ──────────────────────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: var(--sans);
       background: var(--cream);
@@ -32,753 +47,2038 @@
       line-height: 1.7;
       font-size: 16px;
     }
-    a { color: inherit; text-decoration: none; }
-    img { display: block; max-width: 100%; }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
 
     /* ── NAVBAR ─────────────────────────────────────────────────────── */
+
     nav {
-      position: sticky; top: 0; z-index: 100;
+      position: sticky;
+      top: 0;
+      z-index: 100;
       background: var(--navy);
       border-bottom: 2px solid var(--red);
     }
+
     .nav-inner {
-      max-width: 1100px; margin: 0 auto;
+      max-width: 1100px;
+      margin: 0 auto;
       padding: 0 32px;
-      display: flex; align-items: center; justify-content: space-between;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       height: 60px;
     }
+
     .nav-brand {
       font-family: var(--serif);
-      font-size: 1.25rem; font-weight: 600;
-      color: var(--white); letter-spacing: .02em;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: .02em;
     }
-    .nav-links { display: flex; gap: 28px; list-style: none; }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
     .nav-links a {
-      font-size: .82rem; font-weight: 500; letter-spacing: .08em;
-      text-transform: uppercase; color: rgba(255,255,255,.75);
+      font-size: .82rem;
+      font-weight: 500;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.75);
       transition: color .2s;
     }
-    .nav-links a:hover, .nav-links a.active { color: var(--white); }
-    .nav-links a.active { border-bottom: 2px solid var(--red); padding-bottom: 2px; }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--white);
+    }
+
+    .nav-links a.active {
+      border-bottom: 2px solid var(--red);
+      padding-bottom: 2px;
+    }
+
 
     /* ── HERO ───────────────────────────────────────────────────────── */
+
     .hero {
       background: var(--navy);
       color: var(--white);
       padding: 80px 32px 72px;
     }
+
     .hero-inner {
-      max-width: 1100px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 340px; gap: 64px; align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 64px;
+      align-items: center;
     }
+
     .hero-label {
-      font-size: .75rem; font-weight: 500; letter-spacing: .14em;
-      text-transform: uppercase; color: var(--red);
+      font-size: .75rem;
+      font-weight: 500;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--red);
       margin-bottom: 16px;
     }
+
     .hero h1 {
       font-family: var(--serif);
       font-size: clamp(2.6rem, 5vw, 3.6rem);
-      font-weight: 300; line-height: 1.18;
-      color: var(--white); margin-bottom: 20px;
+      font-weight: 300;
+      line-height: 1.18;
+      color: var(--white);
+      margin-bottom: 20px;
     }
-    .hero h1 em { font-style: italic; color: var(--cream2); }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--cream2);
+    }
+
     .hero-desc {
-      font-size: 1.05rem; font-weight: 300; line-height: 1.8;
-      color: rgba(255,255,255,.78); max-width: 580px; margin-bottom: 28px;
+      font-size: 1.05rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: rgba(255,255,255,.78);
+      max-width: 580px;
+      margin-bottom: 28px;
     }
-    .hero-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+
     .hero-tag {
-      font-size: .75rem; font-weight: 500; letter-spacing: .06em;
+      font-size: .75rem;
+      font-weight: 500;
+      letter-spacing: .06em;
       text-transform: uppercase;
       border: 1px solid rgba(255,255,255,.25);
-      padding: 5px 14px; border-radius: 2px;
+      padding: 5px 14px;
+      border-radius: 2px;
       color: rgba(255,255,255,.7);
     }
-    .hero-links { display: flex; flex-wrap: wrap; gap: 12px; }
-    .btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 11px 22px;
-      font-size: .82rem; font-weight: 500; letter-spacing: .06em;
-      text-transform: uppercase; border-radius: 2px;
-      transition: all .2s; cursor: pointer;
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
     }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 22px;
+      font-size: .82rem;
+      font-weight: 500;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: all .2s;
+      cursor: pointer;
+    }
+
     .btn-primary {
-      background: var(--red); color: var(--white);
+      background: var(--red);
+      color: var(--white);
       border: 2px solid var(--red);
     }
-    .btn-primary:hover { background: #a30d23; border-color: #a30d23; }
+
+    .btn-primary:hover {
+      background: #a30d23;
+      border-color: #a30d23;
+    }
+
     .btn-outline {
-      background: transparent; color: var(--white);
+      background: transparent;
+      color: var(--white);
       border: 1px solid rgba(255,255,255,.35);
     }
-    .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,.07); }
+
+    .btn-outline:hover {
+      border-color: var(--white);
+      background: rgba(255,255,255,.07);
+    }
+
 
     /* Hero photo */
+
     .hero-photo {
       position: relative;
     }
+
     .hero-photo::before {
       content: '';
-      position: absolute; inset: -12px -12px 12px 12px;
+      position: absolute;
+      inset: -12px -12px 12px 12px;
       border: 1.5px solid rgba(200,16,46,.4);
-      border-radius: 4px; z-index: 0;
+      border-radius: 4px;
+      z-index: 0;
     }
+
     .hero-photo img {
-      position: relative; z-index: 1;
-      width: 100%; border-radius: 3px;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      border-radius: 3px;
       filter: grayscale(15%);
     }
 
+
     /* ── SECTION WRAPPER ────────────────────────────────────────────── */
-    section { padding: 80px 32px; }
-    .container { max-width: 1100px; margin: 0 auto; }
+
+    section {
+      padding: 80px 32px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
 
     .section-label {
-      font-size: .72rem; font-weight: 500; letter-spacing: .14em;
-      text-transform: uppercase; color: var(--red);
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--red);
       margin-bottom: 8px;
     }
+
     .section-title {
       font-family: var(--serif);
       font-size: clamp(1.9rem, 3.5vw, 2.6rem);
-      font-weight: 300; line-height: 1.2;
-      color: var(--navy); margin-bottom: 48px;
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--navy);
+      margin-bottom: 48px;
     }
 
+
     /* ── AFFILIATIONS STRIP ─────────────────────────────────────────── */
+
     .affiliations {
       background: var(--white);
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
       padding: 28px 32px;
     }
+
     .affiliations-inner {
-      max-width: 1100px; margin: 0 auto;
-      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
     }
+
     .aff-label {
-      font-size: .72rem; font-weight: 500; letter-spacing: .1em;
-      text-transform: uppercase; color: var(--muted); margin-right: 8px;
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-right: 8px;
       white-space: nowrap;
     }
+
     .aff-link {
-      display: inline-flex; align-items: center; gap: 7px;
-      font-size: .85rem; font-weight: 400; color: var(--navy-mid);
-      border: 1px solid var(--border); border-radius: 2px;
-      padding: 6px 14px; transition: all .2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: .85rem;
+      font-weight: 400;
+      color: var(--navy-mid);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 6px 14px;
+      transition: all .2s;
     }
-    .aff-link:hover { border-color: var(--navy); background: var(--cream); }
-    .aff-icon { width: 16px; height: 16px; flex-shrink: 0; }
+
+    .aff-link:hover {
+      border-color: var(--navy);
+      background: var(--cream);
+    }
+
+    .aff-icon {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+
     .aff-divider {
-      width: 1px; height: 20px; background: var(--border);
+      width: 1px;
+      height: 20px;
+      background: var(--border);
       display: none;
     }
 
+
     /* ── RESEARCH AREAS ─────────────────────────────────────────────── */
-    .research-bg { background: var(--white); }
+
+    .research-bg {
+      background: var(--white);
+    }
+
     .research-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
       margin-top: -8px;
     }
+
     .research-card {
       padding: 36px 32px;
       border-left: 3px solid transparent;
       transition: border-color .2s, background .2s;
       background: var(--white);
     }
-    .research-card:hover { border-left-color: var(--red); background: var(--cream); }
+
+    .research-card:hover {
+      border-left-color: var(--red);
+      background: var(--cream);
+    }
+
     .research-num {
-      font-family: var(--serif); font-size: 2.4rem; font-weight: 300;
-      color: var(--cream2); line-height: 1; margin-bottom: 16px;
+      font-family: var(--serif);
+      font-size: 2.4rem;
+      font-weight: 300;
+      color: var(--cream2);
+      line-height: 1;
+      margin-bottom: 16px;
     }
+
     .research-card h3 {
-      font-family: var(--serif); font-size: 1.2rem; font-weight: 600;
-      color: var(--navy); margin-bottom: 10px;
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 10px;
     }
+
     .research-card p {
-      font-size: .9rem; color: var(--muted); line-height: 1.7;
+      font-size: .9rem;
+      color: var(--muted);
+      line-height: 1.7;
     }
+
 
     /* ── PUBLICATIONS ───────────────────────────────────────────────── */
-    .pub-list { display: flex; flex-direction: column; gap: 0; }
+
+    .pub-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
     .pub-item {
-      display: grid; grid-template-columns: 64px 1fr;
-      gap: 0 28px; padding: 36px 0;
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 0 28px;
+      padding: 36px 0;
       border-bottom: 1px solid var(--border);
     }
-    .pub-item:first-child { border-top: 1px solid var(--border); }
+
+    .pub-item:first-child {
+      border-top: 1px solid var(--border);
+    }
+
     .pub-year {
-      font-family: var(--serif); font-size: 1.5rem; font-weight: 300;
-      color: var(--cream2); padding-top: 2px; text-align: right;
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: var(--cream2);
+      padding-top: 2px;
+      text-align: right;
     }
-    .pub-content {}
+
     .pub-badge {
-      display: inline-block; font-size: .68rem; font-weight: 500;
-      letter-spacing: .1em; text-transform: uppercase;
-      padding: 3px 9px; border-radius: 1px; margin-bottom: 10px;
+      display: inline-block;
+      font-size: .68rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 1px;
+      margin-bottom: 10px;
     }
-    .badge-journal { background: #e8f0e8; color: #2a6a2a; }
-    .badge-conf    { background: #e8eef8; color: #1a3a6a; }
-    .badge-review  { background: #f8f0e8; color: #7a4a1a; }
+
+    .badge-journal {
+      background: #e8f0e8;
+      color: #2a6a2a;
+    }
+
+    .badge-conf {
+      background: #e8eef8;
+      color: #1a3a6a;
+    }
+
+    .badge-review {
+      background: #f8f0e8;
+      color: #7a4a1a;
+    }
+
+    /* NEW — arXiv / preprint badge */
+    .badge-preprint {
+      background: #f0eaf8;
+      color: #5b3a82;
+    }
+
     .pub-title {
-      font-family: var(--serif); font-size: 1.15rem; font-weight: 600;
-      color: var(--navy); line-height: 1.4; margin-bottom: 8px;
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.4;
+      margin-bottom: 8px;
     }
+
     .pub-authors {
-      font-size: .85rem; color: var(--muted); margin-bottom: 6px;
+      font-size: .85rem;
+      color: var(--muted);
+      margin-bottom: 6px;
     }
-    .pub-authors strong { color: var(--navy-mid); font-weight: 500; }
+
+    .pub-authors strong {
+      color: var(--navy-mid);
+      font-weight: 500;
+    }
+
     .pub-venue {
-      font-size: .85rem; color: var(--muted);
-      font-style: italic; margin-bottom: 14px;
+      font-size: .85rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 14px;
     }
-    .pub-links { display: flex; gap: 10px; flex-wrap: wrap; }
+
+    .pub-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
     .pub-link {
-      font-size: .76rem; font-weight: 500; letter-spacing: .06em;
-      text-transform: uppercase; padding: 5px 14px;
-      border: 1px solid var(--border); border-radius: 2px; color: var(--navy-mid);
+      font-size: .76rem;
+      font-weight: 500;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      color: var(--navy-mid);
       transition: all .2s;
     }
-    .pub-link:hover { border-color: var(--navy); background: var(--navy); color: var(--white); }
-    .pub-link.primary { border-color: var(--red); color: var(--red); }
-    .pub-link.primary:hover { background: var(--red); color: var(--white); }
+
+    .pub-link:hover {
+      border-color: var(--navy);
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .pub-link.primary {
+      border-color: var(--red);
+      color: var(--red);
+    }
+
+    .pub-link.primary:hover {
+      background: var(--red);
+      color: var(--white);
+    }
+
 
     /* ── PRESENTATIONS ──────────────────────────────────────────────── */
-    .pres-bg { background: var(--cream); }
-    .pres-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; }
+
+    .pres-bg {
+      background: var(--cream);
+    }
+
+    .pres-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+    }
+
     .pres-card {
-      background: var(--white); padding: 32px;
-      position: relative; overflow: hidden;
+      background: var(--white);
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
       transition: box-shadow .2s;
     }
-    .pres-card:hover { box-shadow: 0 8px 32px rgba(13,34,64,.08); }
+
+    .pres-card:hover {
+      box-shadow: 0 8px 32px rgba(13,34,64,.08);
+    }
+
     .pres-card::after {
-      content: ''; position: absolute;
-      bottom: 0; left: 0; right: 0; height: 3px;
-      background: var(--navy); transform: scaleX(0);
-      transform-origin: left; transition: transform .3s;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--navy);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .3s;
     }
-    .pres-card:hover::after { transform: scaleX(1); }
+
+    .pres-card:hover::after {
+      transform: scaleX(1);
+    }
+
     .pres-conf {
-      font-size: .72rem; font-weight: 500; letter-spacing: .1em;
-      text-transform: uppercase; color: var(--red); margin-bottom: 12px;
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 12px;
     }
+
     .pres-card h3 {
-      font-family: var(--serif); font-size: 1.1rem; font-weight: 600;
-      color: var(--navy); line-height: 1.4; margin-bottom: 14px;
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.4;
+      margin-bottom: 14px;
     }
+
     .pres-video {
-      position: relative; padding-bottom: 56.25%; height: 0;
-      overflow: hidden; border-radius: 2px; margin-top: 16px;
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 2px;
+      margin-top: 16px;
       background: #000;
     }
-    .pres-video iframe, .pres-video video {
-      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+
+    .pres-video iframe,
+    .pres-video video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       border: none;
     }
 
-    /* ── EDUCATION & AWARDS ─────────────────────────────────────────── */
-    .edu-bg { background: var(--navy); color: var(--white); }
-    .edu-bg .section-title { color: var(--white); }
-    .edu-bg .section-label { color: var(--red); }
-    .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
 
-    .edu-list { list-style: none; }
+    /* ── EDUCATION & AWARDS ─────────────────────────────────────────── */
+
+    .edu-bg {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .edu-bg .section-title {
+      color: var(--white);
+    }
+
+    .edu-bg .section-label {
+      color: var(--red);
+    }
+
+    .edu-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+
+    .edu-list {
+      list-style: none;
+    }
+
     .edu-item {
-      display: flex; gap: 20px; padding: 28px 0;
+      display: flex;
+      gap: 20px;
+      padding: 28px 0;
       border-bottom: 1px solid rgba(255,255,255,.1);
     }
-    .edu-item:first-child { border-top: 1px solid rgba(255,255,255,.1); }
-    .edu-dot {
-      width: 8px; height: 8px; border-radius: 50%;
-      background: var(--red); margin-top: 8px; flex-shrink: 0;
-    }
-    .edu-body {}
-    .edu-inst {
-      font-family: var(--serif); font-size: 1.1rem; font-weight: 600;
-      color: var(--white); margin-bottom: 4px;
-    }
-    .edu-degree { font-size: .9rem; color: rgba(255,255,255,.6); }
 
-    .award-list { list-style: none; }
+    .edu-item:first-child {
+      border-top: 1px solid rgba(255,255,255,.1);
+    }
+
+    .edu-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--red);
+      margin-top: 8px;
+      flex-shrink: 0;
+    }
+
+    .edu-inst {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .edu-degree {
+      font-size: .9rem;
+      color: rgba(255,255,255,.6);
+    }
+
+    .award-list {
+      list-style: none;
+    }
+
     .award-item {
-      display: flex; gap: 20px; padding: 22px 0;
+      display: flex;
+      gap: 20px;
+      padding: 22px 0;
       border-bottom: 1px solid rgba(255,255,255,.1);
       align-items: flex-start;
     }
-    .award-item:first-child { border-top: 1px solid rgba(255,255,255,.1); }
+
+    .award-item:first-child {
+      border-top: 1px solid rgba(255,255,255,.1);
+    }
+
     .award-icon {
-      font-size: 1rem; flex-shrink: 0; width: 24px; text-align: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+      width: 24px;
+      text-align: center;
       margin-top: 2px;
     }
-    .award-name { font-size: .95rem; color: rgba(255,255,255,.85); }
-    .award-org  { font-size: .8rem; color: rgba(255,255,255,.45); margin-top: 2px; }
+
+    .award-name {
+      font-size: .95rem;
+      color: rgba(255,255,255,.85);
+    }
+
+    .award-org {
+      font-size: .8rem;
+      color: rgba(255,255,255,.45);
+      margin-top: 2px;
+    }
+
 
     /* ── CONTACT ────────────────────────────────────────────────────── */
-    .contact-bg { background: var(--white); }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-    .contact-info p {
-      font-size: .95rem; color: var(--muted); margin-bottom: 24px;
+
+    .contact-bg {
+      background: var(--white);
     }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .contact-info p {
+      font-size: .95rem;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
     .contact-item {
-      display: flex; gap: 14px; align-items: flex-start;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
       margin-bottom: 20px;
     }
+
     .contact-item-icon {
-      width: 36px; height: 36px; background: var(--cream);
-      border-radius: 2px; display: flex; align-items: center;
-      justify-content: center; flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      background: var(--cream);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
       font-size: 1rem;
     }
-    .contact-item-body {}
-    .contact-item-label {
-      font-size: .7rem; font-weight: 500; letter-spacing: .1em;
-      text-transform: uppercase; color: var(--muted); margin-bottom: 2px;
-    }
-    .contact-item-val { font-size: .9rem; color: var(--navy); }
-    .contact-item-val a { color: var(--navy-mid); }
-    .contact-item-val a:hover { color: var(--red); }
 
-    .social-row { display: flex; gap: 12px; margin-top: 8px; }
-    .social-btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 9px 18px; font-size: .78rem; font-weight: 500;
-      letter-spacing: .06em; text-transform: uppercase;
-      border: 1px solid var(--border); border-radius: 2px;
-      color: var(--navy-mid); transition: all .2s;
+    .contact-item-label {
+      font-size: .7rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2px;
     }
-    .social-btn:hover { border-color: var(--navy); background: var(--navy); color: var(--white); }
-    .social-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+    .contact-item-val {
+      font-size: .9rem;
+      color: var(--navy);
+    }
+
+    .contact-item-val a {
+      color: var(--navy-mid);
+    }
+
+    .contact-item-val a:hover {
+      color: var(--red);
+    }
+
+    .social-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      font-size: .78rem;
+      font-weight: 500;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      color: var(--navy-mid);
+      transition: all .2s;
+    }
+
+    .social-btn:hover {
+      border-color: var(--navy);
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .social-btn svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+    }
+
 
     /* ── FOOTER ─────────────────────────────────────────────────────── */
+
     footer {
       background: var(--navy);
       padding: 28px 32px;
       text-align: center;
-      font-size: .8rem; color: rgba(255,255,255,.4);
+      font-size: .8rem;
+      color: rgba(255,255,255,.4);
     }
-    footer span { color: rgba(255,255,255,.6); }
+
+    footer span {
+      color: rgba(255,255,255,.6);
+    }
+
 
     /* ── ANIMATIONS ─────────────────────────────────────────────────── */
+
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
+
     .hero-text > * {
       opacity: 0;
       animation: fadeUp .7s ease forwards;
     }
-    .hero-label       { animation-delay: .1s; }
-    .hero h1          { animation-delay: .25s; }
-    .hero-desc        { animation-delay: .38s; }
-    .hero-tags        { animation-delay: .48s; }
-    .hero-links       { animation-delay: .56s; }
-    .hero-photo       { animation: fadeUp .8s .3s ease forwards; opacity: 0; }
+
+    .hero-label {
+      animation-delay: .1s;
+    }
+
+    .hero h1 {
+      animation-delay: .25s;
+    }
+
+    .hero-desc {
+      animation-delay: .38s;
+    }
+
+    .hero-tags {
+      animation-delay: .48s;
+    }
+
+    .hero-links {
+      animation-delay: .56s;
+    }
+
+    .hero-photo {
+      animation: fadeUp .8s .3s ease forwards;
+      opacity: 0;
+    }
+
 
     /* ── RESPONSIVE ─────────────────────────────────────────────────── */
+
     @media (max-width: 900px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-photo { max-width: 280px; }
-      .research-grid { grid-template-columns: 1fr; }
-      .pres-grid { grid-template-columns: 1fr; }
-      .edu-grid { grid-template-columns: 1fr; gap: 32px; }
-      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-      .pub-item { grid-template-columns: 48px 1fr; }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-photo {
+        max-width: 280px;
+      }
+
+      .research-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pres-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .edu-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .pub-item {
+        grid-template-columns: 48px 1fr;
+      }
     }
+
     @media (max-width: 600px) {
-      .nav-links { display: none; }
-      section { padding: 60px 20px; }
-      .hero { padding: 52px 20px; }
+
+      .nav-links {
+        display: none;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+
+      .hero {
+        padding: 52px 20px;
+      }
     }
+
   </style>
 </head>
+
 <body>
 
+
 <!-- ── NAV ──────────────────────────────────────────────────────────── -->
+
 <nav>
+
   <div class="nav-inner">
-    <a class="nav-brand" href="#">K. S. Yildirim</a>
+
+    <a class="nav-brand" href="#">
+      K. S. Yildirim
+    </a>
+
     <ul class="nav-links">
-      <li><a href="#about" class="active">Home</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#presentations">Presentations</a></li>
-      <li><a href="#background">Background</a></li>
-      <li><a href="#contact">Contact</a></li>
+
+      <li>
+        <a href="#about" class="active">Home</a>
+      </li>
+
+      <li>
+        <a href="#research">Research</a>
+      </li>
+
+      <li>
+        <a href="#publications">Publications</a>
+      </li>
+
+      <li>
+        <a href="#presentations">Presentations</a>
+      </li>
+
+      <li>
+        <a href="#background">Background</a>
+      </li>
+
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+
     </ul>
+
   </div>
+
 </nav>
 
+
 <!-- ── HERO ─────────────────────────────────────────────────────────── -->
+
 <div class="hero" id="about">
+
   <div class="hero-inner">
+
     <div class="hero-text">
-      <p class="hero-label">PhD Researcher · McGill University</p>
-      <h1>Kibele Sebnem<br><em>Yildirim</em></h1>
+
+      <p class="hero-label">
+        PhD Researcher · McGill University
+      </p>
+
+      <h1>
+        Kibele Sebnem<br>
+        <em>Yildirim</em>
+      </h1>
+
       <p class="hero-desc">
         I am a PhD student in Operations Management at the Desautels Faculty of Management, McGill University.
         My research applies machine learning, data optimization, and simulation to deliver impactful,
         data-driven solutions in healthcare and public systems.
       </p>
+
       <div class="hero-tags">
-        <span class="hero-tag">Operations Management</span>
-        <span class="hero-tag">Healthcare Analytics</span>
-        <span class="hero-tag">Machine Learning</span>
-        <span class="hero-tag">Optimization</span>
-        <span class="hero-tag">Simulation</span>
+
+        <span class="hero-tag">
+          Operations Management
+        </span>
+
+        <span class="hero-tag">
+          Healthcare Analytics
+        </span>
+
+        <span class="hero-tag">
+          Machine Learning
+        </span>
+
+        <span class="hero-tag">
+          Optimization
+        </span>
+
+        <span class="hero-tag">
+          Simulation
+        </span>
+
       </div>
+
+
       <div class="hero-links">
-        <a href="https://www.mcgill.ca/desautels/kibele-sebnem-yildirim" target="_blank" class="btn btn-primary">
+
+        <a
+          href="https://www.mcgill.ca/desautels/kibele-sebnem-yildirim"
+          target="_blank"
+          class="btn btn-primary"
+        >
           McGill Profile
         </a>
-        <a href="https://scholar.google.com/citations?user=ple5nBIAAAAJ&hl=en" target="_blank" class="btn btn-outline">
+
+        <a
+          href="https://scholar.google.com/citations?user=ple5nBIAAAAJ&hl=en"
+          target="_blank"
+          class="btn btn-outline"
+        >
           Google Scholar
         </a>
-        <a href="https://www.linkedin.com/in/kibele-sebnem-yildirim-71054917b/" target="_blank" class="btn btn-outline">
+
+        <a
+          href="https://www.linkedin.com/in/kibele-sebnem-yildirim-71054917b/"
+          target="_blank"
+          class="btn btn-outline"
+        >
           LinkedIn
         </a>
+
       </div>
+
     </div>
+
+
     <div class="hero-photo">
-      <img src="/Kibele Sebnem Yildirim - 251031-095713-9902.JPG"
-           alt="Kibele Sebnem Yildirim">
+
+      <img
+        src="/Kibele Sebnem Yildirim - 251031-095713-9902.JPG"
+        alt="Kibele Sebnem Yildirim"
+      >
+
     </div>
+
   </div>
+
 </div>
 
-<!-- ── AFFILIATIONS ──────────────────────────────────────────────────── -->
-<div class="affiliations">
-  <div class="affiliations-inner">
-    <span class="aff-label">Affiliated with</span>
 
-    <a class="aff-link" href="https://www.mcgill.ca/desautels/kibele-sebnem-yildirim" target="_blank">
-      <!-- McGill icon (shield outline) -->
-      <svg class="aff-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+<!-- ── AFFILIATIONS ──────────────────────────────────────────────────── -->
+
+<div class="affiliations">
+
+  <div class="affiliations-inner">
+
+    <span class="aff-label">
+      Affiliated with
+    </span>
+
+
+    <a
+      class="aff-link"
+      href="https://www.mcgill.ca/desautels/kibele-sebnem-yildirim"
+      target="_blank"
+    >
+
+      <svg
+        class="aff-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+      >
         <path d="M12 2L3 7v6c0 5 4 9 9 10 5-1 9-5 9-10V7L12 2z"/>
       </svg>
+
       McGill Desautels · PhD Researcher
+
     </a>
 
-    <a class="aff-link" href="https://scholar.google.com/citations?user=ple5nBIAAAAJ&hl=en" target="_blank">
-      <!-- Scholar cap icon -->
-      <svg class="aff-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+
+    <a
+      class="aff-link"
+      href="https://scholar.google.com/citations?user=ple5nBIAAAAJ&hl=en"
+      target="_blank"
+    >
+
+      <svg
+        class="aff-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+      >
         <path d="M12 3L2 8l10 5 10-5-10-5z"/>
         <path d="M6 10.5v5c0 2.5 2.7 4.5 6 4.5s6-2 6-4.5v-5"/>
       </svg>
+
       Google Scholar
+
     </a>
 
-    <a class="aff-link" href="https://github.com/kibelesebnemyildirim" target="_blank">
-      <!-- GitHub icon -->
-      <svg class="aff-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+
+    <a
+      class="aff-link"
+      href="https://github.com/kibelesebnemyildirim"
+      target="_blank"
+    >
+
+      <svg
+        class="aff-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+      >
         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
       </svg>
+
       GitHub
+
     </a>
 
-    <a class="aff-link" href="https://unipathapp.com/" target="_blank">
-      <!-- Link icon -->
-      <svg class="aff-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+
+    <a
+      class="aff-link"
+      href="https://unipathapp.com/"
+      target="_blank"
+    >
+
+      <svg
+        class="aff-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+      >
         <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
         <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
       </svg>
+
       UniPath App
+
     </a>
+
   </div>
+
 </div>
 
+
 <!-- ── RESEARCH ──────────────────────────────────────────────────────── -->
+
 <section class="research-bg" id="research">
+
   <div class="container">
-    <p class="section-label">Focus Areas</p>
-    <h2 class="section-title">Research Interests</h2>
+
+    <p class="section-label">
+      Focus Areas
+    </p>
+
+    <h2 class="section-title">
+      Research Interests
+    </h2>
+
+
     <div class="research-grid">
+
+
       <div class="research-card">
-        <div class="research-num">01</div>
-        <h3>Healthcare Operations</h3>
-        <p>Optimizing care delivery systems — from home care worker assignment to community pharmacy access — using operations research and data-driven methods.</p>
+
+        <div class="research-num">
+          01
+        </div>
+
+        <h3>
+          Healthcare Operations
+        </h3>
+
+        <p>
+          Optimizing care delivery systems — from home care worker assignment
+          to community pharmacy access — using operations research and
+          data-driven methods.
+        </p>
+
       </div>
+
+
       <div class="research-card">
-        <div class="research-num">02</div>
-        <h3>Machine Learning &amp; Optimization</h3>
-        <p>Developing models that integrate simulation, stochastic optimization, and ML to support managerial decision-making under uncertainty in complex operational settings.</p>
+
+        <div class="research-num">
+          02
+        </div>
+
+        <h3>
+          Machine Learning &amp; Optimization
+        </h3>
+
+        <p>
+          Developing models that integrate simulation, stochastic optimization,
+          and ML to support managerial decision-making under uncertainty in
+          complex operational settings.
+        </p>
+
       </div>
+
+
       <div class="research-card">
-        <div class="research-num">03</div>
-        <h3>Public Systems &amp; Crisis Management</h3>
-        <p>Applying systematic operations research frameworks to wildfire management, rural infrastructure, and other high-stakes public system challenges.</p>
+
+        <div class="research-num">
+          03
+        </div>
+
+        <h3>
+          Public Systems &amp; Crisis Management
+        </h3>
+
+        <p>
+          Applying systematic operations research frameworks to wildfire
+          management, rural infrastructure, and other high-stakes public
+          system challenges.
+        </p>
+
       </div>
+
+
     </div>
+
   </div>
+
 </section>
 
+
 <!-- ── PUBLICATIONS ──────────────────────────────────────────────────── -->
+
 <section id="publications">
+
   <div class="container">
-    <p class="section-label">Scholarly Work</p>
-    <h2 class="section-title">Publications</h2>
+
+    <p class="section-label">
+      Scholarly Work
+    </p>
+
+    <h2 class="section-title">
+      Publications
+    </h2>
+
 
     <div class="pub-list">
 
-      <!-- Paper 1 — Journal (first published paper) -->
+
+      <!-- ─────────────────────────────────────────────────────────────
+           NEW PAPER — SRRL
+           ───────────────────────────────────────────────────────────── -->
+
       <div class="pub-item">
-        <div class="pub-year">2026</div>
+
+        <div class="pub-year">
+          2026
+        </div>
+
+
         <div class="pub-content">
-          <span class="pub-badge badge-journal">Journal Article</span>
-          <div class="pub-title">Wildfire Management: A Systematic Review of Optimization Under Uncertainty and Complexity</div>
+
+          <span class="pub-badge badge-preprint">
+            Preprint · arXiv
+          </span>
+
+
+          <div class="pub-title">
+            Self-Review Reinforcement Learning (SRRL) with Cross-Episode Memory and Policy Distillation
+          </div>
+
+
           <div class="pub-authors">
-            Rostamian, P., Ahmadi Digehsara, A., <strong>Yildirim, K.S.</strong>, &amp; Ardestani-Jaafari, A.
+            Amin, M.Z. &amp; <strong>Yildirim, K.S.</strong>
           </div>
-          <div class="pub-venue">Operations Research Forum — Springer Nature, January 2026</div>
+
+
+          <div class="pub-venue">
+            arXiv:2607.05541 · Machine Learning (cs.LG) &amp; Artificial Intelligence (cs.AI) · 2026
+          </div>
+
+
           <div class="pub-links">
-            <a class="pub-link primary" href="https://link.springer.com/article/10.1007/s43069-026-00604-7" target="_blank">Read Paper ↗</a>
-            <a class="pub-link" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ple5nBIAAAAJ&citation_for_view=ple5nBIAAAAJ:u5HHmVD_uO8C" target="_blank">Google Scholar</a>
+
+            <a
+              class="pub-link primary"
+              href="https://arxiv.org/abs/2607.05541"
+              target="_blank"
+            >
+              Read Paper ↗
+            </a>
+
+
+            <a
+              class="pub-link"
+              href="https://arxiv.org/pdf/2607.05541"
+              target="_blank"
+            >
+              PDF
+            </a>
+
           </div>
+
         </div>
+
       </div>
 
-      <!-- Paper 2 — Conference -->
+
+      <!-- ─────────────────────────────────────────────────────────────
+           WILDFIRE JOURNAL PAPER
+           ───────────────────────────────────────────────────────────── -->
+
       <div class="pub-item">
-        <div class="pub-year">2024</div>
-        <div class="pub-content">
-          <span class="pub-badge badge-conf">Conference Paper</span>
-          <div class="pub-title">Optimizing Home Care Worker Assignments: A Case Study in British Columbia</div>
-          <div class="pub-authors"><strong>Yildirim, K.S.</strong> et al.</div>
-          <div class="pub-venue">INFORMS Annual Meeting, 2024</div>
-          <div class="pub-links">
-            <a class="pub-link primary" href="https://bit.ly/4cV44dl" target="_blank">Read Paper ↗</a>
-            <a class="pub-link" href="https://www.youtube.com/watch?v=R7IxsLfQxKs" target="_blank">Watch Presentation</a>
-          </div>
+
+        <div class="pub-year">
+          2026
         </div>
+
+
+        <div class="pub-content">
+
+          <span class="pub-badge badge-journal">
+            Journal Article
+          </span>
+
+
+          <div class="pub-title">
+            Wildfire Management: A Systematic Review of Optimization Under Uncertainty and Complexity
+          </div>
+
+
+          <div class="pub-authors">
+            Rostamian, P., Ahmadi Digehsara, A.,
+            <strong>Yildirim, K.S.</strong>,
+            &amp; Ardestani-Jaafari, A.
+          </div>
+
+
+          <div class="pub-venue">
+            Operations Research Forum — Springer Nature, January 2026
+          </div>
+
+
+          <div class="pub-links">
+
+            <a
+              class="pub-link primary"
+              href="https://link.springer.com/article/10.1007/s43069-026-00604-7"
+              target="_blank"
+            >
+              Read Paper ↗
+            </a>
+
+
+            <a
+              class="pub-link"
+              href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ple5nBIAAAAJ&citation_for_view=ple5nBIAAAAJ:u5HHmVD_uO8C"
+              target="_blank"
+            >
+              Google Scholar
+            </a>
+
+          </div>
+
+        </div>
+
       </div>
 
-      <!-- Paper 3 — Conference -->
+
+      <!-- ─────────────────────────────────────────────────────────────
+           HOME CARE PAPER
+           ───────────────────────────────────────────────────────────── -->
+
       <div class="pub-item">
-        <div class="pub-year">2024</div>
-        <div class="pub-content">
-          <span class="pub-badge badge-conf">Conference Paper</span>
-          <div class="pub-title">Improving Access to Community Pharmacies in Rural Areas: A Drone Delivery Approach</div>
-          <div class="pub-authors"><strong>Yildirim, K.S.</strong> et al.</div>
-          <div class="pub-venue">POMS Istanbul 2024 · ICIMP 2024</div>
-          <div class="pub-links">
-            <a class="pub-link primary" href="/dronepaper.pdf" target="_blank">Read Paper ↗</a>
-          </div>
+
+        <div class="pub-year">
+          2024
         </div>
+
+
+        <div class="pub-content">
+
+          <span class="pub-badge badge-conf">
+            Conference Paper
+          </span>
+
+
+          <div class="pub-title">
+            Optimizing Home Care Worker Assignments: A Case Study in British Columbia
+          </div>
+
+
+          <div class="pub-authors">
+            <strong>Yildirim, K.S.</strong> et al.
+          </div>
+
+
+          <div class="pub-venue">
+            INFORMS Annual Meeting, 2024
+          </div>
+
+
+          <div class="pub-links">
+
+            <a
+              class="pub-link primary"
+              href="https://bit.ly/4cV44dl"
+              target="_blank"
+            >
+              Read Paper ↗
+            </a>
+
+
+            <a
+              class="pub-link"
+              href="https://www.youtube.com/watch?v=R7IxsLfQxKs"
+              target="_blank"
+            >
+              Watch Presentation
+            </a>
+
+          </div>
+
+        </div>
+
       </div>
 
-      <!-- Paper 4 — Conference -->
+
+      <!-- ─────────────────────────────────────────────────────────────
+           DRONE DELIVERY PAPER
+           ───────────────────────────────────────────────────────────── -->
+
       <div class="pub-item">
-        <div class="pub-year">2023</div>
-        <div class="pub-content">
-          <span class="pub-badge badge-review">Conference Abstract</span>
-          <div class="pub-title">An Augmented Reality (AR) Application to Solve Difficult Intravenous Access</div>
-          <div class="pub-authors"><strong>Yildirim, K.S.</strong> et al.</div>
-          <div class="pub-venue">Multidisciplinary Undergraduate Research Conference 2023 · Interdisciplinary Student Health Conference 2023</div>
-          <div class="pub-links">
-            <a class="pub-link primary" href="/MURC x CJUR 2023_abstract.pdf" target="_blank">Read Abstract ↗</a>
-            <a class="pub-link" href="https://smp.cms.ok.ubc.ca/wp-content/uploads/sites/93/2023/03/2023-ISHC-Programv2.pdf#page=60" target="_blank">Conference Programme</a>
-          </div>
+
+        <div class="pub-year">
+          2024
         </div>
+
+
+        <div class="pub-content">
+
+          <span class="pub-badge badge-conf">
+            Conference Paper
+          </span>
+
+
+          <div class="pub-title">
+            Improving Access to Community Pharmacies in Rural Areas: A Drone Delivery Approach
+          </div>
+
+
+          <div class="pub-authors">
+            <strong>Yildirim, K.S.</strong> et al.
+          </div>
+
+
+          <div class="pub-venue">
+            POMS Istanbul 2024 · ICIMP 2024
+          </div>
+
+
+          <div class="pub-links">
+
+            <a
+              class="pub-link primary"
+              href="/dronepaper.pdf"
+              target="_blank"
+            >
+              Read Paper ↗
+            </a>
+
+          </div>
+
+        </div>
+
       </div>
+
+
+      <!-- ─────────────────────────────────────────────────────────────
+           AR PROJECT
+           ───────────────────────────────────────────────────────────── -->
+
+      <div class="pub-item">
+
+        <div class="pub-year">
+          2023
+        </div>
+
+
+        <div class="pub-content">
+
+          <span class="pub-badge badge-review">
+            Conference Abstract
+          </span>
+
+
+          <div class="pub-title">
+            An Augmented Reality (AR) Application to Solve Difficult Intravenous Access
+          </div>
+
+
+          <div class="pub-authors">
+            <strong>Yildirim, K.S.</strong> et al.
+          </div>
+
+
+          <div class="pub-venue">
+            Multidisciplinary Undergraduate Research Conference 2023 ·
+            Interdisciplinary Student Health Conference 2023
+          </div>
+
+
+          <div class="pub-links">
+
+            <a
+              class="pub-link primary"
+              href="/MURC x CJUR 2023_abstract.pdf"
+              target="_blank"
+            >
+              Read Abstract ↗
+            </a>
+
+
+            <a
+              class="pub-link"
+              href="https://smp.cms.ok.ubc.ca/wp-content/uploads/sites/93/2023/03/2023-ISHC-Programv2.pdf#page=60"
+              target="_blank"
+            >
+              Conference Programme
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
 
     </div>
+
 
     <div style="margin-top:36px;">
-      <a href="https://scholar.google.com/citations?user=ple5nBIAAAAJ&hl=en" target="_blank" class="btn btn-primary">
+
+      <a
+        href="https://scholar.google.com/citations?user=ple5nBIAAAAJ&hl=en"
+        target="_blank"
+        class="btn btn-primary"
+      >
         View All on Google Scholar
       </a>
+
     </div>
+
   </div>
+
 </section>
+
 
 <!-- ── PRESENTATIONS ─────────────────────────────────────────────────── -->
+
 <section class="pres-bg" id="presentations">
+
   <div class="container">
-    <p class="section-label">Talks &amp; Conferences</p>
-    <h2 class="section-title">Selected Presentations</h2>
+
+    <p class="section-label">
+      Talks &amp; Conferences
+    </p>
+
+    <h2 class="section-title">
+      Selected Presentations
+    </h2>
+
+
     <div class="pres-grid">
 
+
       <div class="pres-card">
-        <p class="pres-conf">INFORMS Annual Meeting · 2024</p>
-        <h3>Optimizing Home Care Worker Assignments: A Case Study in British Columbia</h3>
+
+        <p class="pres-conf">
+          INFORMS Annual Meeting · 2024
+        </p>
+
+        <h3>
+          Optimizing Home Care Worker Assignments: A Case Study in British Columbia
+        </h3>
+
+
         <div class="pres-video">
-          <iframe src="https://www.youtube.com/embed/R7IxsLfQxKs"
+
+          <iframe
+            src="https://www.youtube.com/embed/R7IxsLfQxKs"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
+            allowfullscreen
+          ></iframe>
+
         </div>
+
       </div>
 
+
       <div class="pres-card">
-        <p class="pres-conf">POMS Istanbul · ICIMP · 2024</p>
-        <h3>Improving Access to Community Pharmacies in Rural Areas: A Drone Delivery Approach</h3>
+
+        <p class="pres-conf">
+          POMS Istanbul · ICIMP · 2024
+        </p>
+
+        <h3>
+          Improving Access to Community Pharmacies in Rural Areas:
+          A Drone Delivery Approach
+        </h3>
+
+
         <div class="pres-video">
+
           <video controls>
-            <source src="/images/pomspresent2.mp4" type="video/mp4">
+
+            <source
+              src="/images/pomspresent2.mp4"
+              type="video/mp4"
+            >
+
           </video>
+
         </div>
+
       </div>
 
-      <div class="pres-card">
-        <p class="pres-conf">ICIMP · 2024</p>
-        <h3>Applications of Operations Research in Wildfire Management: A Systematic Review</h3>
-        <p style="font-size:.9rem;color:var(--muted);margin-top:12px;">
-          Presented findings from the systematic review of 177 peer-reviewed studies on OR-based wildfire management (2000–2024).
-        </p>
-      </div>
 
       <div class="pres-card">
-        <p class="pres-conf">MURC · ISHC · 2023</p>
-        <h3>An Augmented Reality (AR) Application to Solve Difficult Intravenous Access</h3>
-        <p style="font-size:.9rem;color:var(--muted);margin-top:12px;">
-          Presented at both the Multidisciplinary Undergraduate Research Conference and the Interdisciplinary Student Health Conference, UBC.
+
+        <p class="pres-conf">
+          ICIMP · 2024
         </p>
-        <a href="https://smp.cms.ok.ubc.ca/wp-content/uploads/sites/93/2023/03/2023-ISHC-Programv2.pdf#page=60"
-           target="_blank" class="pub-link" style="display:inline-flex;margin-top:14px;">Conference Programme ↗</a>
+
+        <h3>
+          Applications of Operations Research in Wildfire Management:
+          A Systematic Review
+        </h3>
+
+        <p style="font-size:.9rem;color:var(--muted);margin-top:12px;">
+          Presented findings from the systematic review of 177 peer-reviewed
+          studies on OR-based wildfire management (2000–2024).
+        </p>
+
       </div>
+
+
+      <div class="pres-card">
+
+        <p class="pres-conf">
+          MURC · ISHC · 2023
+        </p>
+
+        <h3>
+          An Augmented Reality (AR) Application to Solve Difficult Intravenous Access
+        </h3>
+
+        <p style="font-size:.9rem;color:var(--muted);margin-top:12px;">
+          Presented at both the Multidisciplinary Undergraduate Research Conference
+          and the Interdisciplinary Student Health Conference, UBC.
+        </p>
+
+        <a
+          href="https://smp.cms.ok.ubc.ca/wp-content/uploads/sites/93/2023/03/2023-ISHC-Programv2.pdf#page=60"
+          target="_blank"
+          class="pub-link"
+          style="display:inline-flex;margin-top:14px;"
+        >
+          Conference Programme ↗
+        </a>
+
+      </div>
+
 
     </div>
+
   </div>
+
 </section>
+
 
 <!-- ── BACKGROUND ────────────────────────────────────────────────────── -->
+
 <section class="edu-bg" id="background">
+
   <div class="container">
-    <p class="section-label">Academic Background</p>
-    <h2 class="section-title">Education &amp; Honours</h2>
+
+    <p class="section-label">
+      Academic Background
+    </p>
+
+    <h2 class="section-title">
+      Education &amp; Honours
+    </h2>
+
+
     <div class="edu-grid">
 
-      <div>
-        <ul class="edu-list">
-          <li class="edu-item">
-            <div class="edu-dot"></div>
-            <div class="edu-body">
-              <div class="edu-inst">McGill University</div>
-              <div class="edu-degree">PhD in Operations Management · 2025 – present<br>Desautels Faculty of Management, Montréal</div>
-            </div>
-          </li>
-          <li class="edu-item">
-            <div class="edu-dot"></div>
-            <div class="edu-body">
-              <div class="edu-inst">University of British Columbia</div>
-              <div class="edu-degree">BSc Computer Science &amp; BA Economics (Double Major) · 2021 – 2025<br>Okanagan Campus</div>
-            </div>
-          </li>
-        </ul>
-      </div>
 
       <div>
-        <ul class="award-list">
-          <li class="award-item">
-            <div class="award-icon">🏅</div>
-            <div>
-              <div class="award-name">International Impact Award</div>
-              <div class="award-org">University of British Columbia · 2023</div>
+
+        <ul class="edu-list">
+
+
+          <li class="edu-item">
+
+            <div class="edu-dot"></div>
+
+
+            <div class="edu-body">
+
+              <div class="edu-inst">
+                McGill University
+              </div>
+
+              <div class="edu-degree">
+                PhD in Operations Management · 2025 – present
+                <br>
+                Desautels Faculty of Management, Montréal
+              </div>
+
             </div>
+
           </li>
-          <li class="award-item">
-            <div class="award-icon">🌐</div>
-            <div>
-              <div class="award-name">Global Pathfinder Award</div>
-              <div class="award-org">University of British Columbia · 2023</div>
+
+
+          <li class="edu-item">
+
+            <div class="edu-dot"></div>
+
+
+            <div class="edu-body">
+
+              <div class="edu-inst">
+                University of British Columbia
+              </div>
+
+              <div class="edu-degree">
+                BSc Computer Science &amp; BA Economics (Double Major) · 2021 – 2025
+                <br>
+                Okanagan Campus
+              </div>
+
             </div>
+
           </li>
-          <li class="award-item">
-            <div class="award-icon">🔬</div>
-            <div>
-              <div class="award-name">Christian Bürkert Student Research Scholarship</div>
-              <div class="award-org">Germany · 2023</div>
-            </div>
-          </li>
-          <li class="award-item">
-            <div class="award-icon">🎓</div>
-            <div>
-              <div class="award-name">Deputy Vice-Chancellor Scholarship</div>
-              <div class="award-org">University of British Columbia · 2022</div>
-            </div>
-          </li>
-          <li class="award-item">
-            <div class="award-icon">⭐</div>
-            <div>
-              <div class="award-name">Karen McKellin International Leader of Tomorrow Award</div>
-              <div class="award-org">University of British Columbia · 2021</div>
-            </div>
-          </li>
+
+
         </ul>
+
+      </div>
+
+
+      <div>
+
+        <ul class="award-list">
+
+
+          <li class="award-item">
+
+            <div class="award-icon">
+              🏅
+            </div>
+
+            <div>
+
+              <div class="award-name">
+                International Impact Award
+              </div>
+
+              <div class="award-org">
+                University of British Columbia · 2023
+              </div>
+
+            </div>
+
+          </li>
+
+
+          <li class="award-item">
+
+            <div class="award-icon">
+              🌐
+            </div>
+
+            <div>
+
+              <div class="award-name">
+                Global Pathfinder Award
+              </div>
+
+              <div class="award-org">
+                University of British Columbia · 2023
+              </div>
+
+            </div>
+
+          </li>
+
+
+          <li class="award-item">
+
+            <div class="award-icon">
+              🔬
+            </div>
+
+            <div>
+
+              <div class="award-name">
+                Christian Bürkert Student Research Scholarship
+              </div>
+
+              <div class="award-org">
+                Germany · 2023
+              </div>
+
+            </div>
+
+          </li>
+
+
+          <li class="award-item">
+
+            <div class="award-icon">
+              🎓
+            </div>
+
+            <div>
+
+              <div class="award-name">
+                Deputy Vice-Chancellor Scholarship
+              </div>
+
+              <div class="award-org">
+                University of British Columbia · 2022
+              </div>
+
+            </div>
+
+          </li>
+
+
+          <li class="award-item">
+
+            <div class="award-icon">
+              ⭐
+            </div>
+
+            <div>
+
+              <div class="award-name">
+                Karen McKellin International Leader of Tomorrow Award
+              </div>
+
+              <div class="award-org">
+                University of British Columbia · 2021
+              </div>
+
+            </div>
+
+          </li>
+
+
+        </ul>
+
       </div>
 
     </div>
+
   </div>
+
 </section>
+
 
 <!-- ── CONTACT ───────────────────────────────────────────────────────── -->
+
 <section class="contact-bg" id="contact">
+
   <div class="container">
-    <p class="section-label">Get in Touch</p>
-    <h2 class="section-title">Contact</h2>
+
+    <p class="section-label">
+      Get in Touch
+    </p>
+
+    <h2 class="section-title">
+      Contact
+    </h2>
+
+
     <div class="contact-grid">
 
+
+      <!-- LEFT SIDE -->
+
       <div class="contact-info">
-        <p>I am always open to discussing research collaborations, speaking invitations, or PhD opportunities. Feel free to reach out.</p>
+
+        <p>
+          I am always open to discussing research collaborations,
+          speaking invitations, or PhD opportunities. Feel free to reach out.
+        </p>
+
 
         <div class="contact-item">
-          <div class="contact-item-icon">✉</div>
+
+          <div class="contact-item-icon">
+            ✉
+          </div>
+
+
           <div class="contact-item-body">
-            <div class="contact-item-label">Email</div>
-            <div class="contact-item-val">
-              <a href="mailto:kibele.yildirim@mail.mcgill.ca">kibele.yildirim@mail.mcgill.ca</a>
+
+            <div class="contact-item-label">
+              Email
             </div>
+
+            <div class="contact-item-val">
+
+              <a href="mailto:kibele.yildirim@mail.mcgill.ca">
+                kibele.yildirim@mail.mcgill.ca
+              </a>
+
+            </div>
+
           </div>
+
         </div>
+
 
         <div class="contact-item">
-          <div class="contact-item-icon">📍</div>
-          <div class="contact-item-body">
-            <div class="contact-item-label">Office</div>
-            <div class="contact-item-val">Bronfman Building, Room 520<br>1001 Sherbrooke Ouest, Montréal, QC H3A 1G5</div>
+
+          <div class="contact-item-icon">
+            📍
           </div>
+
+
+          <div class="contact-item-body">
+
+            <div class="contact-item-label">
+              Office
+            </div>
+
+            <div class="contact-item-val">
+              Bronfman Building, Room 520
+              <br>
+              1001 Sherbrooke Ouest, Montréal, QC H3A 1G5
+            </div>
+
+          </div>
+
         </div>
 
+      </div>
+
+
+      <!-- RIGHT SIDE -->
 
       <div>
-        <p style="font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;font-weight:500;">Connect Online</p>
-        <div class="social-row" style="flex-direction:column;gap:10px;align-items:flex-start;">
 
-          <a class="social-btn" href="https://www.mcgill.ca/desautels/kibele-sebnem-yildirim" target="_blank">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v6c0 5 4 9 9 10 5-1 9-5 9-10V7L12 2z"/></svg>
+        <p style="font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;font-weight:500;">
+          Connect Online
+        </p>
+
+
+        <div
+          class="social-row"
+          style="flex-direction:column;gap:10px;align-items:flex-start;"
+        >
+
+
+          <a
+            class="social-btn"
+            href="https://www.mcgill.ca/desautels/kibele-sebnem-yildirim"
+            target="_blank"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M12 2L3 7v6c0 5 4 9 9 10 5-1 9-5 9-10V7L12 2z"/>
+            </svg>
+
             McGill Faculty Profile
+
           </a>
 
-          <a class="social-btn" href="https://scholar.google.com/citations?user=ple5nBIAAAAJ&hl=en" target="_blank">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3L2 8l10 5 10-5-10-5z"/><path d="M6 10.5v5c0 2.5 2.7 4.5 6 4.5s6-2 6-4.5v-5"/></svg>
+
+          <a
+            class="social-btn"
+            href="https://scholar.google.com/citations?user=ple5nBIAAAAJ&hl=en"
+            target="_blank"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M12 3L2 8l10 5 10-5-10-5z"/>
+              <path d="M6 10.5v5c0 2.5 2.7 4.5 6 4.5s6-2 6-4.5v-5"/>
+            </svg>
+
             Google Scholar Profile
+
           </a>
 
-          <a class="social-btn" href="https://www.linkedin.com/in/kibele-sebnem-yildirim-71054917b/" target="_blank">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+
+          <a
+            class="social-btn"
+            href="https://www.linkedin.com/in/kibele-sebnem-yildirim-71054917b/"
+            target="_blank"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+
             LinkedIn
+
           </a>
 
-          <a class="social-btn" href="https://github.com/kibelesebnemyildirim" target="_blank">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+
+          <a
+            class="social-btn"
+            href="https://github.com/kibelesebnemyildirim"
+            target="_blank"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            </svg>
+
             GitHub
+
           </a>
 
-          <a class="social-btn" href="https://unipathapp.com/" target="_blank">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+
+          <a
+            class="social-btn"
+            href="https://unipathapp.com/"
+            target="_blank"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+            </svg>
+
             UniPath App
+
           </a>
+
 
         </div>
+
       </div>
+
+
     </div>
+
   </div>
+
 </section>
 
+
 <!-- ── FOOTER ────────────────────────────────────────────────────────── -->
+
 <footer>
-  <span>Kibele Sebnem Yildirim</span> · PhD Student, Operations Management · Desautels Faculty of Management, McGill University
+
+  <span>
+    Kibele Sebnem Yildirim
+  </span>
+
+  · PhD Student, Operations Management
+  · Desautels Faculty of Management, McGill University
+
 </footer>
+
 
 </body>
 </html>
